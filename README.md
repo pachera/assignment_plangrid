@@ -1,5 +1,5 @@
 https://docs.google.com/document/d/1iEjEtAcvw62s9SypQOyMwTqMBC9Yv2g99No1PEIgyoE/edit#heading=h.k175kgjuqtwk
-
+-----------------------------------------
 Prerequisites:
 
 Linux:
@@ -9,7 +9,7 @@ python3 (Ubuntu: apt-get install python3)
 Python:
 python -m pip install --upgrade pip
 pip install -r requirements.txt (included)
-
+------------------------------------------
 Solution:
 
 Starting Django Server: python manage.py runserver
@@ -34,10 +34,10 @@ Expected logging in console and logfile debug.log:
 hello_world.views DEBUG    2019-09-15 00:02:10,011 http://127.0.0.1:8000/
 hello_world.views DEBUG    2019-09-15 00:02:19,541 http://127.0.0.1:8000/
 hello_world.views DEBUG    2019-09-15 00:02:44,712 http://127.0.0.1:8000/
-
+----------------------------------------------------
 Testing:
 
-Test 1. http requests by a Linux client (hhtpie):
+Test 1. http requests by a Linux client (httpie):
 
 Command: http 127.0.0.1:8000
 
@@ -48,24 +48,24 @@ Date: Sun, 15 Sep 2019 00:21:53 GMT
 Server: WSGIServer/0.2 CPython/3.6.8
 X-Frame-Options: SAMEORIGIN
 
-<p>Hello, World!</p>
-
-Command: http 127.0.0.1:8000
+Command: http 127.0.0.1:8000 Accept:application/json
 HTTP/1.1 200 OK
-Content-Length: 21
-Content-Type: text/html; charset=utf-8
-Date: Sun, 15 Sep 2019 00:21:53 GMT
+Content-Length: 28
+Content-Type: application/json
+Date: Sun, 15 Sep 2019 00:46:59 GMT
 Server: WSGIServer/0.2 CPython/3.6.8
 X-Frame-Options: SAMEORIGIN
-python manage.py test hello_world
-<p>Hello, World!</p>
 
+{
+    "message": "Hello, World!"
+}
+-----------------------------------------
 Test 2: python script making external requests:
 
 python testmytest.py 127.0.0.1:8000
 HTML pass <p>Hello, World!</p>
 JSON pass {'message': 'Hello, World!'}
-
+-----------------------------------------
 Test 3: django test facilities with mock requests:
 
 cat hello_world/tests_views.py
@@ -107,7 +107,3 @@ Ran 2 tests in 0.005s
 
 OK
 Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
-
-
-
-
