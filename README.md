@@ -32,7 +32,9 @@ Quit the server with CONTROL-C.
 Expected logging in console and logfile debug.log:
 
 hello_world.views DEBUG    2019-09-15 00:02:10,011 http://127.0.0.1:8000/
+
 hello_world.views DEBUG    2019-09-15 00:02:19,541 http://127.0.0.1:8000/
+
 hello_world.views DEBUG    2019-09-15 00:02:44,712 http://127.0.0.1:8000/
 
 ----------------------------------------------------
