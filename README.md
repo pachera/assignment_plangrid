@@ -70,7 +70,9 @@ X-Frame-Options: SAMEORIGIN
 Test 2: python script making external requests:
 
 python testmytest.py 127.0.0.1:8000
+
 HTML pass <p>Hello, World!</p>
+
 JSON pass {'message': 'Hello, World!'}
 
 -----------------------------------------
