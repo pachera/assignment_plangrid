@@ -1,5 +1,5 @@
 https://docs.google.com/document/d/1iEjEtAcvw62s9SypQOyMwTqMBC9Yv2g99No1PEIgyoE/edit#heading=h.k175kgjuqtwk
------------------------------------------
+
 Prerequisites:
 
 Linux:
@@ -9,6 +9,7 @@ python3 (Ubuntu: apt-get install python3)
 Python:
 python -m pip install --upgrade pip
 pip install -r requirements.txt (included)
+
 ------------------------------------------
 Solution:
 
@@ -34,6 +35,7 @@ Expected logging in console and logfile debug.log:
 hello_world.views DEBUG    2019-09-15 00:02:10,011 http://127.0.0.1:8000/
 hello_world.views DEBUG    2019-09-15 00:02:19,541 http://127.0.0.1:8000/
 hello_world.views DEBUG    2019-09-15 00:02:44,712 http://127.0.0.1:8000/
+
 ----------------------------------------------------
 Testing:
 
@@ -65,6 +67,7 @@ Test 2: python script making external requests:
 python testmytest.py 127.0.0.1:8000
 HTML pass <p>Hello, World!</p>
 JSON pass {'message': 'Hello, World!'}
+
 -----------------------------------------
 Test 3: django test facilities with mock requests:
 
