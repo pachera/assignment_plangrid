@@ -51,6 +51,9 @@ Date: Sun, 15 Sep 2019 00:21:53 GMT
 Server: WSGIServer/0.2 CPython/3.6.8
 X-Frame-Options: SAMEORIGIN
 
+<p>Hello, World!</p>
+
+
 Command: http 127.0.0.1:8000 Accept:application/json
 HTTP/1.1 200 OK
 Content-Length: 28
@@ -62,6 +65,7 @@ X-Frame-Options: SAMEORIGIN
 {
     "message": "Hello, World!"
 }
+
 -----------------------------------------
 Test 2: python script making external requests:
 
